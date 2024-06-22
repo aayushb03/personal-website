@@ -1,27 +1,22 @@
 "use client";
-
-import {getTotalUsers,getTotalPageViews} from "@/services/madhousingAnalytics";
-import {useEffect, useState} from "react";
+import NavBar from "@/app/navBar";
+import HomePage from "@/app/homePage";
+import AboutPage from "@/app/aboutPage";
+import WorkPage from "@/app/workPage";
+import ProjectPage from "@/app/projectPage";
 
 export default function Home() {
-  const [users, setUsers] = useState(0);
-  const [pageViews, setPageViews] = useState(0);
-
-  useEffect(() => {
-    getTotalUsers().then((data) => {
-      setUsers(data ? parseInt(data.toString()) : 0);
-    });
-    getTotalPageViews().then((data) => {
-      setPageViews(data ? parseInt(data.toString()) : 0);
-    });
-  }, []);
-
   return (
-    <div>
-      <h1>Aayush Website</h1>
-      <h2>MadHousing Analytics</h2>
-      <p>Total Users: {users}</p>
-      <p>Total Page Views: {pageViews}</p>
+    <div className={"flex bg-app-light-gray"}>
+      <NavBar/>
+      <div className={"flex w-full justify-center"}>
+        <div className={"flex flex-col w-9/12"}>
+          <HomePage/>
+          <AboutPage/>
+          <WorkPage/>
+          <ProjectPage/>
+        </div>
+      </div>
     </div>
   );
 }

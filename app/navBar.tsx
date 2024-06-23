@@ -61,7 +61,7 @@ export default function NavBar() {
   const [currentPage, setCurrentPage] = useState(0);
 
   return (
-    <motion.div className="fixed w-full flex justify-center items-center top-0 left-0 bg-stone-800 z-50 h-[3.5rem] shadow-lg"
+    <motion.div className="fixed w-full flex justify-center items-center top-0 left-0 bg-stone-800 z-10 h-[3.5rem] shadow-lg"
     initial={{opacity: 0}}
     animate={{opacity: 1}}
     transition={{duration: 1, delay: 0.5, ease: "easeInOut"}}>
@@ -78,7 +78,7 @@ export default function NavBar() {
         <div className={"flex flex-col items-center justify-center"}>
           <div className={"flex gap-8"}>
             {pages.map((page, i) => (
-              <Link to={page.link} smooth duration={500} className={"flex h-full justify-center items-center cursor-pointer px-2 py-1 rounded-md relative duration-300 ease-in"} key={i}>
+              <Link to={page.link} smooth duration={500} className={"flex h-full justify-center items-center px-2 py-1 rounded-md relative duration-200 ease-in hover:text-app-red"} key={i}>
                 <span className={"text-xl"}>{page.name}</span>
                 {i === currentPage && (
                   <motion.div

@@ -40,7 +40,7 @@ export default function WorkType({company, role, time, description, img}: WorkTy
         animate={{opacity: isInView ? 1 : 0, scaleX: isInView ? 1 : 0}}
         layout transition={spring}
       >
-        <div className={"w-full flex gap-2 text-lg font-bold"}>
+        <div className={"w-full flex gap-2 text-xl text-red-200"}>
           {[role, "|", time].map((el, i) => (
             <motion.span
               initial={{opacity: 0}}
@@ -53,6 +53,7 @@ export default function WorkType({company, role, time, description, img}: WorkTy
           ))}
         </div>
         <motion.p
+          className={"leading-5 text-justify"}
           initial={{opacity: 0}}
           animate={isInView ? {opacity: 1} : {opacity: 0}}
           transition={{duration: 1, delay: isInView ? 2.2 : 0}}

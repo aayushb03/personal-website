@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} no-scrollbar`}>{children}</body>
+      <body className={`${inter.className} no-scrollbar cursor-none`}>{children}</body>
     </html>
   );
 }

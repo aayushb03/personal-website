@@ -1,5 +1,5 @@
 import PageHeader from "@/components/pageHeader";
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import {motion, useInView} from "framer-motion";
 import ProjectType from "@/components/projectType";
@@ -12,13 +12,15 @@ export default function ProjectPage() {
   const [users, setUsers] = useState("");
   const [views, setViews] = useState("");
 
-  getTotalUsers().then((data) => {
-    return setUsers(data as string);
-  });
+  useEffect(() => {
+    getTotalUsers().then((data) => {
+      setUsers(data as string);
+    });
 
-  getTotalPageViews().then((data) => {
-    return setViews(data as string);
-  });
+    getTotalPageViews().then((data) => {
+      setViews(data as string);
+    });
+  }, []);
 
   const projects = [
     {

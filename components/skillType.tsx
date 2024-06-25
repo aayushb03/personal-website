@@ -12,7 +12,7 @@ export default function SkillType({title, skills, delay}: SkillTypeProps) {
   const isInView = useInView(ref, { once: false });
 
   return (
-    <div className={"w-full flex"} ref={ref}>
+    <div className={"w-full flex justify-center items-center"} ref={ref}>
       <motion.h2 className={"text-xl w-2/12"}
         initial={{opacity: 0}}
         animate={isInView ? {opacity: 1} : {opacity: 0}}
@@ -20,7 +20,7 @@ export default function SkillType({title, skills, delay}: SkillTypeProps) {
       >
         {title}
       </motion.h2>
-      <div className="flex gap-8 w-10/12">
+      <div className="flex flex-wrap gap-4 w-10/12">
         {skills.map((el, i) => (
           <motion.span
             initial={{opacity: 0}}

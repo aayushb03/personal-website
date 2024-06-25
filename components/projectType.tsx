@@ -66,7 +66,9 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
                   }}
                   onClick={() => {if (!isToggled) setIsToggled(true)}}
       >
-        <img src={projects[projectIndex].img} alt="Project" className="w-full h-full rounded-xl -z-10 object-cover shadow-md" draggable="false"/>
+        <a>
+          <img src={projects[projectIndex].img} alt="Project" className="w-full h-full rounded-xl -z-10 object-cover shadow-md hover:opacity-70 ease-in-out duration-200" draggable="false"/>
+        </a>
         <motion.div
           className="absolute bottom-0 left-0 right-0 bg-stone-800 bg-opacity-90 text-white px-8 py-2 text-xl rounded-b-xl z-20 flex justify-between items-center"
           initial={{opacity: 0, y: 20}}
@@ -77,8 +79,8 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
             {projects[projectIndex].description}
           </div>
           <div className={"flex gap-6 text-2xl"}>
-            {projects[projectIndex].github && <a href={projects[projectIndex].github} className={"hover:text-app-red transition ease-in-out duration-200"}><GrGithub/></a>}
-            {projects[projectIndex].link && <a href={projects[projectIndex].link} className={"hover:text-app-red transition ease-in-out duration-200"}><GrLink/></a>}
+            {projects[projectIndex].github && <a href={projects[projectIndex].github} className={"hover:text-app-red transition ease-in-out cursor-none duration-200"}><GrGithub/></a>}
+            {projects[projectIndex].link && <a href={projects[projectIndex].link} className={"hover:text-app-red transition ease-in-out cursor-none duration-200"}><GrLink/></a>}
           </div>
         </motion.div>
         <motion.div
@@ -108,10 +110,10 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
                 {paragraph}
               </motion.p>
             ))}
-            <div className={"w-8 h-8 flex justify-center items-center absolute top-0 left-0 mt-4 ml-4 rounded-full hover:bg-app-red hover:scale-105 ease-in-out duration-200"}
+            <button className={"w-8 h-8 flex justify-center items-center absolute top-0 left-0 mt-4 ml-4 rounded-full cursor-none hover:bg-app-red hover:scale-105 ease-in-out duration-200"}
             onClick={() => setIsToggled(false)}>
               <BackArrowSvg isToggled={isToggled} />
-            </div>
+            </button>
           </div>
         </motion.div>
       </motion.div>

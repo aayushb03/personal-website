@@ -9,7 +9,7 @@ export default function AboutPage() {
   const isInView = useInView(ref, { once: false });
 
   const languages = ["Java", "C#", "C/C++", "Python", "TypeScript", "JavaScript", "SQL", "HTML/CSS", "R"];
-  const frameworks = ["React", "Angular", "Next.js", "Node.js", "Spring", "Django", ".NET", "Bootstrap", "TailwindCSS"];
+  const frameworks = ["React", "Angular", "Next.js", "Node.js", "Spring", "Django", ".NET", "TailwindCSS"];
   const databases = ["MySQL", "PostgreSQL", "MongoDB", "SQLite"];
 
   return (
@@ -57,7 +57,7 @@ export default function AboutPage() {
           </motion.p>
         </div>
       </div>
-      <div className={"flex flex-col gap-4"}>
+      <div className={"w-full flex flex-col gap-3 items-center justify-center"}>
         <SkillType title={"Languages"} skills={languages} delay={1}/>
         <SkillType title={"Frameworks"} skills={frameworks} delay={1.5}/>
         <SkillType title={"Databases"} skills={databases} delay={2}/>

@@ -69,13 +69,13 @@ export default function NavBar() {
         className="fixed h-1 top-0 left-0 right-0 bg-app-red origin-left"
         style={{scaleX: scrollYProgress}}
       />
-      <div className={"w-full px-20 pt-1 flex justify-between text-white"}>
-        <div className={"flex gap-8"}>
+      <div className={"w-full md:px-20 px-10 pt-1 flex justify-between text-white"}>
+        <div className={"flex md:gap-8 gap-4"}>
           {socials.map((social, i) => (
             <LogoSvg paths={social.paths} link={social.link} delay={i*0.5 + 1} key={i}/>
           ))}
         </div>
-        <div className={"flex flex-col items-center justify-center"}>
+        <div className={"hidden md:flex flex-col items-center justify-center"}>
           <div className={"flex gap-8"}>
             {pages.map((page, i) => (
               <Link to={page.link} smooth duration={500} className={"flex h-full justify-center items-center px-2 py-1 rounded-md relative duration-200 ease-in hover:text-app-red"} key={i}>

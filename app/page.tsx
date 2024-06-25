@@ -12,7 +12,7 @@ export default function Home() {
       <CustomCursor/>
       <NavBar/>
       <div className={"flex w-full justify-center"}>
-        <div className={"flex flex-col w-9/12"}>
+        <div className={"flex flex-col md:w-9/12 w-11/12"}>
           <HomePage/>
           <AboutPage/>
           <WorkPage/>

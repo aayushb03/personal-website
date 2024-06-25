@@ -1,6 +1,5 @@
 import {motion, useInView} from "framer-motion";
 import {useRef} from "react";
-import {AnimatedText} from "@/components/animatedText";
 
 type WorkTypeProps = {
   company: string;
@@ -40,7 +39,7 @@ export default function WorkType({company, role, time, description, img}: WorkTy
         animate={{opacity: isInView ? 1 : 0, scaleX: isInView ? 1 : 0}}
         layout transition={spring}
       >
-        <div className={"w-full flex gap-2 text-xl text-red-200"}>
+        <div className={"w-full flex gap-2 text-lg text-red-200"}>
           {[role, "|", time].map((el, i) => (
             <motion.span
               initial={{opacity: 0}}

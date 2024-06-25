@@ -6,21 +6,21 @@ export default function WorkPage() {
     {
       company: "Barclays",
       role: "Software Engineering Intern",
-      time: "June 2024 to August 2024",
+      time: "Jun 2024 - Aug 2024",
       img: "workLogos/barclaysLogo.png",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
     },
     {
       company: "UW-Madison",
       role: "AI Undergraduate Researcher",
-      time: "September 2023 to Present",
+      time: "Sep 2023 - Present",
       img: "workLogos/uwMadisonLogo.png",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
     },
     {
       company: "Calamos Investments",
       role: "Software Development Intern",
-      time: "June 2023 to August 2023",
+      time: "Jun 2023 - Aug 2023",
       img: "workLogos/calamosLogo.png",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
     }

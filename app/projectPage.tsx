@@ -3,10 +3,22 @@ import {useRef, useState} from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import {motion, useInView} from "framer-motion";
 import ProjectType from "@/components/projectType";
+import {getTotalPageViews, getTotalUsers} from "@/services/madhousingAnalytics";
 
 export default function ProjectPage() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
+
+  const [users, setUsers] = useState("");
+  const [views, setViews] = useState("");
+
+  getTotalUsers().then((data) => {
+    return setUsers(data as string);
+  });
+
+  getTotalPageViews().then((data) => {
+    return setViews(data as string);
+  });
 
   const projects = [
     {
@@ -14,7 +26,7 @@ export default function ProjectPage() {
       img: "projectThumbnails/madhousingThumbnail.png",
       link: "https://www.madhousing.com/",
       paragraphs: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        `Madhousing has ${users} users and ${views} page views.`,
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
       ]

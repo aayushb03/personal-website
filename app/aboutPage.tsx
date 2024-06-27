@@ -16,16 +16,17 @@ export default function AboutPage() {
     <div className={"min-h-screen w-full flex flex-col items-center pt-12"} id={'about'}>
       <PageHeader title={"About"}/>
       <div className={"w-full flex justify-around gap-10 mb-8"} ref={ref}>
-        <div className={"flex w-1/3"}>
+        <div className={"gap-4 w-full text-sm md:text-base"}>
           <motion.div
+            className={"w-5/12 md:w-1/3 float-start pr-4 pb-2"}
             variants={{hidden: {opacity: 0}, visible: {opacity: 1, y: 0, transition: {duration: 0.75}}}}
             initial="hidden"
             animate={isInView ? `visible` : `hidden`}>
-            <Image src={"/aayushPicture.jpg"} alt={"aayushPicture"} width={400} height={400} className={"drop-shadow-md"}/>
+            <Image src={"/aayushPicture.jpg"} alt={"aayushPicture"} width={400} height={400}
+                   className={"drop-shadow-md"}/>
           </motion.div>
-        </div>
-        <div className={"flex flex-col gap-4 w-2/3"}>
           <motion.p
+            className={"pb-2"}
             variants={{hidden: {opacity: 0, y: 20}, visible: {opacity: 1, y: 0, transition: {duration: 0.75}}}}
             initial="hidden"
             animate={isInView ? `visible` : `hidden`}>
@@ -34,6 +35,7 @@ export default function AboutPage() {
             and its potential to solve real-world problems.
           </motion.p>
           <motion.p
+            className={"pb-2"}
             variants={{
               hidden: {opacity: 0, y: 20},
               visible: {opacity: 1, y: 0, transition: {duration: 0.75, delay: isInView ? 0.7 : 0}}
@@ -58,9 +60,9 @@ export default function AboutPage() {
         </div>
       </div>
       <div className={"w-full flex flex-col gap-3 items-center justify-center"}>
-        <SkillType title={"Languages"} skills={languages} delay={1}/>
-        <SkillType title={"Frameworks"} skills={frameworks} delay={1.5}/>
-        <SkillType title={"Databases"} skills={databases} delay={2}/>
+        <SkillType title={"Languages"} skills={languages} n={0}/>
+        <SkillType title={"Frameworks"} skills={frameworks} n={1}/>
+        <SkillType title={"Databases"} skills={databases} n={2}/>
       </div>
 
     </div>

@@ -18,6 +18,8 @@ const config: Config = {
         'app-light-red': '#FF2D2B',
         'app-red': '#C10A28',
         'app-light-gray': '#E5E4E2',
+        'app-blue': '#2B4162',
+        'app-yellow': '#EFC88B',
       }
     },
   },

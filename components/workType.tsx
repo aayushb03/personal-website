@@ -22,9 +22,9 @@ export default function WorkType({company, role, time, description, img}: WorkTy
   };
 
   return (
-    <motion.div className={`w-full flex justify-between`} ref={ref} layout>
+    <motion.div className={`w-full flex justify-around`} ref={ref} layout>
       <motion.div
-        className={"flex justify-center items-center bg-white rounded-xl w-[30%] h-40 shadow-md"}
+        className={"hidden md:flex justify-center items-center bg-white rounded-lg md:rounded-xl w-[16rem] h-48 md:h-40 shadow-md"}
         initial={{opacity: 0, x: 400}}
         animate={{opacity: isInView ? 1 : 0, x: isInView ? 0 : 400}}
         layout transition={spring}
@@ -34,12 +34,12 @@ export default function WorkType({company, role, time, description, img}: WorkTy
         </div>
       </motion.div>
       <motion.div
-        className={"flex flex-col text-white bg-app-gray p-2 rounded-xl w-[65%] h-40 shadow-md"}
+        className={"flex flex-col text-white bg-app-gray p-2 rounded-lg md:rounded-xl w-[45rem] h-48 md:h-40 shadow-md"}
         initial={{opacity: 0, scaleX: 0}}
         animate={{opacity: isInView ? 1 : 0, scaleX: isInView ? 1 : 0}}
         layout transition={spring}
       >
-        <div className={"w-full flex gap-2 text-lg text-red-200"}>
+        <div className={"hidden md:flex w-full gap-1 text-sm text-red-200"}>
           {[role, "|", time].map((el, i) => (
             <motion.span
               initial={{opacity: 0}}
@@ -51,8 +51,28 @@ export default function WorkType({company, role, time, description, img}: WorkTy
             </motion.span>
           ))}
         </div>
+        <div className={"md:hidden flex flex-col text-sm md:gap-2 md:text-lg text-red-200 pb-1"}>
+          <motion.span
+            className={`text-base`}
+            initial={{opacity: 0}}
+            animate={isInView ? {opacity: 1} : {opacity: 0}}
+            transition={{duration: 0.5, delay: isInView ? 1 : 0}}
+          >
+            {company}
+          </motion.span>
+          {[role, time].map((el, i) => (
+            <motion.span
+              initial={{opacity: 0}}
+              animate={isInView ? {opacity: 1} : {opacity: 0}}
+              transition={{duration: 0.5, delay: isInView ? (i / 3 + 1.2) : 0}}
+              key={i}
+            >
+              <h2>{el}</h2>
+            </motion.span>
+          ))}
+        </div>
         <motion.p
-          className={"leading-5 text-justify"}
+          className={"md:leading-5 md:text-justify text-xs md:text-base"}
           initial={{opacity: 0}}
           animate={isInView ? {opacity: 1} : {opacity: 0}}
           transition={{duration: 1, delay: isInView ? 2.2 : 0}}

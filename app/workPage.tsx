@@ -29,7 +29,7 @@ export default function WorkPage() {
   return (
     <div className={"w-full flex flex-col justify-center items-center min-h-screen pt-12"} id={'experience'}>
       <PageHeader title={"Work Experience"}/>
-      <div className={"flex flex-col gap-6"}>
+      <div className={"flex flex-col w-full gap-6 overflow-hidden"}>
         {workExperience.map((el, i) => (
           <WorkType key={i} {...el}/>
         ))}

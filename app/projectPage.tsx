@@ -76,12 +76,12 @@ export default function ProjectPage() {
   return (
     <div className={"w-full flex flex-col justify-center items-center min-h-screen pt-12"} id={'projects'}>
       <PageHeader title={"Personal Projects"}/>
-      <motion.div className={"flex justify-center items-center h-[75%] w-full"}
+      <motion.div className={"flex justify-center items-center h-[17rem] md:h-[30rem] w-full"}
                   initial={{opacity: 0}}
                   animate={{opacity: isInView ? 1 : 0}}
                   transition={{duration:1, ease: 'easeInOut'}}
                   ref={ref}>
-        <div className={"flex justify-center items-center w-[5%]"}>
+        <div className={"hidden md:flex justify-center items-center w-12"}>
           <button className={"flex justify-center items-center h-12 w-12 rounded-full bg-app-red text-white cursor-none hover:bg-app-light-red hover:scale-110 transition ease-in-out"}
           onClick={() => {
             paginate(-1);
@@ -89,11 +89,18 @@ export default function ProjectPage() {
             <FaArrowLeft className={"text-xl"}/>
           </button>
         </div>
-        <div className={"flex justify-center items-center w-[90%] h-full relative overflow-hidden px-12"}>
+        <div className={"flex flex-col justify-center items-center w-full md:w-[60rem] h-full relative overflow-hidden md:px-8"}>
           <ProjectType project={project} direction={direction} projects={projects} paginate={paginate}/>
+          <motion.div className={"md:hidden text-sm pt-2"}
+                      initial={{opacity: 1}}
+                      animate={{opacity: isInView ? 0 : 1}}
+                      transition={{duration: 10, ease: 'easeInOut'}}
+          >
+            Tap for description, swipe to see more...
+          </motion.div>
         </div>
 
-        <div className={"flex justify-center items-center w-[5%]"}>
+        <div className={"hidden md:flex justify-center items-center w-12"}>
           <button
             className={"flex justify-center items-center h-12 w-12 rounded-full bg-app-red cursor-none text-white hover:bg-app-light-red hover:scale-110 transition ease-in-out"}
             onClick={() => {

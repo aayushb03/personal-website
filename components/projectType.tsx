@@ -70,7 +70,7 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
           <img src={projects[projectIndex].img} alt="Project" className="w-full h-full rounded-xl -z-10 object-cover shadow-md hover:opacity-70 ease-in-out duration-200" draggable="false"/>
         </a>
         <motion.div
-          className="absolute bottom-0 left-0 right-0 bg-stone-800 bg-opacity-90 text-white px-8 py-2 text-xl rounded-b-xl z-20 flex justify-between items-center"
+          className="text-xs md:text-xl absolute bottom-0 left-0 right-0 bg-stone-800 bg-opacity-90 text-white px-2 md:px-8 py-2 rounded-b-xl z-20 flex justify-between items-center"
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{delay: 0.5, duration: 0.5}}
@@ -99,10 +99,10 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
             opacity: { duration: 0.2, ease: 'easeInOut' }
           }}
         >
-          <div className={"relative flex flex-col w-full h-full px-16 py-5 text-lg"}>
+          <div className={"relative flex flex-col w-full h-full pl-16 pr-8 py-5 pb-12 overflow-y-scroll text-xs md:text-lg"}>
             {projects[projectIndex].paragraphs.map((paragraph, i) => (
               <motion.p
-                key={i} className={"mb-4 text-justify"}
+                key={i} className={"mb-2 md:mb-4 md:text-justify"}
                 initial={{opacity: 0, y: 20}}
                 animate={{opacity: isToggled? 1 : 0, y: isToggled ? 0 : 20}}
                 transition={{delay: 0.2 * i, duration: 0.5, ease: 'easeInOut'}}

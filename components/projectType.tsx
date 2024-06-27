@@ -84,7 +84,7 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
           </div>
         </motion.div>
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 right-0 w-0 bg-white bg-opacity-90 flex justify-center items-center z-10"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 right-0 w-0 bg-white bg-opacity-95 flex justify-center items-center z-10"
           initial={{ width: isToggled ? '100%': 0, height: isToggled ? '100%' : 0, borderRadius: isToggled ? '12px' : '50%', opacity: isToggled ? 1 : 0}}
           animate={{
             width: isToggled ? '100%' : 0,

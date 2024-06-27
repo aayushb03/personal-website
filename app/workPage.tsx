@@ -8,21 +8,21 @@ export default function WorkPage() {
       role: "Software Engineering Intern",
       time: "Jun 2024 - Aug 2024",
       img: "workLogos/barclaysLogo.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+      description: "During my time at Barclays so far, I utilized Salesforce Languages such as Apex and SOQL to develop custom Lightning Web Components. These components serve as utilities for the Investment Banking team to display nearby contacts for various clients, leads, and other contacts. Each of the components and Apex controllers were developed with a focus on performance and scalability, and unit tested to ensure reliability."
     },
     {
       company: "UW-Madison",
       role: "AI Undergraduate Researcher",
       time: "Sep 2023 - Present",
       img: "workLogos/uwMadisonLogo.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+      description: "As a researcher for the UW-Madison's #1 ranked Department of Educational Psychology, I have been fine-tuning large language models to evaluate the accuracy of educational concepts in student essays. I also built software that tests these models using LLM-generated test cases using Django and Next.js, which improves our models through reinforcement learning."
     },
     {
       company: "Calamos Investments",
       role: "Software Development Intern",
       time: "Jun 2023 - Aug 2023",
       img: "workLogos/calamosLogo.png",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+      description: "At Calamos, I was tasked with the development and design of a comprehensive tools dashboard, where I designed and engineered 7 full stack applications using Angular, .NET, and SQL, aimed towards monitoring critical business functionalities. I was also responsible for replacing legacy reporting applications on Calamos's proprietary research system."
     }
   ];
 

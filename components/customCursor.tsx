@@ -4,9 +4,9 @@ import {motion, useMotionValue, useSpring} from "framer-motion"
 export default function CustomCursor() {
   const CursorX = useMotionValue(-100);
   const CursorY = useMotionValue(-100);
-  const SpringConfig = { damping: 50, stiffness: 1000 };
-  const CursorXSpring = useSpring(CursorX, SpringConfig);
-  const CursorYSpring = useSpring(CursorY, SpringConfig);
+  // const SpringConfig = { damping: 50, stiffness: 1000 };
+  // const CursorXSpring = useSpring(CursorX, SpringConfig);
+  // const CursorYSpring = useSpring(CursorY, SpringConfig);
 
   const [isHovering, setIsHovering] = useState(false);
 
@@ -45,8 +45,8 @@ export default function CustomCursor() {
       <motion.div
         className={`fixed left-0 top-0 z-50`}
         style={{
-          translateX: CursorXSpring,
-          translateY: CursorYSpring,
+          translateX: CursorX,
+          translateY: CursorY,
           pointerEvents: "none",
         }}
       >

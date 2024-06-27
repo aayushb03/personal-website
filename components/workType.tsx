@@ -34,12 +34,12 @@ export default function WorkType({company, role, time, description, img}: WorkTy
         </div>
       </motion.div>
       <motion.div
-        className={"flex flex-col text-white bg-app-gray p-2 rounded-lg md:rounded-xl w-[45rem] h-48 md:h-40 shadow-md"}
+        className={"flex flex-col text-white bg-app-gray py-1 md:px-3 px-1 rounded-lg md:rounded-xl w-[45rem] h-56 md:h-40 shadow-md"}
         initial={{opacity: 0, scaleX: 0}}
         animate={{opacity: isInView ? 1 : 0, scaleX: isInView ? 1 : 0}}
         layout transition={spring}
       >
-        <div className={"hidden md:flex w-full gap-1 text-sm text-red-200"}>
+        <div className={"hidden md:flex w-full gap-2 text-lg text-red-200"}>
           {[role, "|", time].map((el, i) => (
             <motion.span
               initial={{opacity: 0}}
@@ -51,7 +51,7 @@ export default function WorkType({company, role, time, description, img}: WorkTy
             </motion.span>
           ))}
         </div>
-        <div className={"md:hidden flex flex-col text-sm md:gap-2 md:text-lg text-red-200 pb-1"}>
+        <div className={"md:hidden flex flex-col text-sm md:text-lg text-red-200"}>
           <motion.span
             className={`text-base`}
             initial={{opacity: 0}}

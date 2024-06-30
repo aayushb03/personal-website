@@ -79,8 +79,8 @@ export default function ProjectType({project, direction, projects, paginate}: Pr
             {projects[projectIndex].description}
           </div>
           <div className={"flex gap-6 text-2xl"}>
-            {projects[projectIndex].github && <a href={projects[projectIndex].github} className={"hover:text-app-red transition ease-in-out cursor-none duration-200"}><GrGithub/></a>}
-            {projects[projectIndex].link && <a href={projects[projectIndex].link} className={"hover:text-app-red transition ease-in-out cursor-none duration-200"}><GrLink/></a>}
+            {projects[projectIndex].github && <a href={projects[projectIndex].github} target="_blank" className={"hover:text-app-red transition ease-in-out cursor-none duration-200"}><GrGithub/></a>}
+            {projects[projectIndex].link && <a href={projects[projectIndex].link} target="_blank" className={"hover:text-app-red transition ease-in-out cursor-none duration-200"}><GrLink/></a>}
           </div>
         </motion.div>
         <motion.div

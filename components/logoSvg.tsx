@@ -8,7 +8,7 @@ type LogoSvgProps = {
 
 export default function LogoSvg({ paths, link, delay }: LogoSvgProps) {
   return (
-    <a href={link} className={"flex cursor-none justify-center items-center p-1 w-9 h-9 hover:scale-110 hover:bg-app-red rounded-full transition-all duration-200 ease-in-out"}>
+    <a href={link} target="_blank" className={"flex cursor-none justify-center items-center p-1 w-9 h-9 hover:scale-110 hover:bg-app-red rounded-full transition-all duration-200 ease-in-out"}>
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

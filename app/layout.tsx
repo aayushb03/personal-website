@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Courier_Prime } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <SpeedInsights />
       <Analytics/>
+      <GoogleAnalytics gaId="G-EYYPPGJZN8" />
       <body className={`${inter.className} no-scrollbar cursor-none`}>{children}</body>
     </html>
   );
